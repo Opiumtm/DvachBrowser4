@@ -144,6 +144,10 @@ namespace DvachBrowser4.Core.Lifetime
                 }
                 catch
                 {
+                    if (Debugger.IsAttached)
+                    {
+                        Debugger.Break();
+                    }
                 }
             };
 
