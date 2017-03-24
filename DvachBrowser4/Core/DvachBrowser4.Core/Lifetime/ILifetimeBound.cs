@@ -6,7 +6,7 @@ namespace DvachBrowser4.Core.Lifetime
     /// <summary>
     /// Элемент с управлением времени жизни.
     /// </summary>
-    public interface ILifetimeBound : ILifetimeState
+    public interface ILifetimeBound
     {
         /// <summary>
         /// Установить состояние.
