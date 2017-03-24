@@ -107,9 +107,17 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lifetime\DispatchedLifetimeStateBase.cs" />
+    <Compile Include="Lifetime\FrameworkElementLifetime.cs" />
+    <Compile Include="Lifetime\FrameworkElementLifetimeWithGlobalSuspend.cs" />
+    <Compile Include="Lifetime\ILifetimeBinding.cs" />
     <Compile Include="Lifetime\ILifetimeBound.cs" />
-    <Compile Include="Lifetime\LifetimeConnectionHelper.cs" />
+    <Compile Include="Lifetime\ILifetimeState.cs" />
+    <Compile Include="Lifetime\LifetimeBinding.cs" />
+    <Compile Include="Lifetime\LifetimeHelper.cs" />
     <Compile Include="Lifetime\LifetimeState.cs" />
+    <Compile Include="Lifetime\LifetimeStateBase.cs" />
+    <Compile Include="Lifetime\LifetimeStateChangedEventHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IServiceConnector.cs" />
     <Compile Include="Services\IServiceConsumer.cs" />

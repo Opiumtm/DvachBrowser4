@@ -4,42 +4,20 @@ using System.Threading.Tasks;
 namespace DvachBrowser4.Core.Lifetime
 {
     /// <summary>
-    /// Объект, имеющий управление циклом жизни.
+    /// Элемент с управлением времени жизни.
     /// </summary>
-    public interface ILifetimeBound
+    public interface ILifetimeBound : ILifetimeState
     {
         /// <summary>
-        /// Установить состояние цикла жизни объекта.
+        /// Установить состояние.
         /// </summary>
-        /// <param name="state">Состояние.</param>
+        /// <param name="newState">Новое состояние.</param>
         /// <returns>Таск.</returns>
-        Task SetLifetimeState(LifetimeState state);
+        Task SetLifetimeState(LifetimeState newState);
 
         /// <summary>
-        /// Состоянике цикла жизни.
+        /// Текущая привязка.
         /// </summary>
-        LifetimeState LifetimeState { get; }
-
-        /// <summary>
-        /// Можно устанавливать состояние.
-        /// </summary>
-        bool CanBindState { get; }
-
-        /// <summary>
-        /// Состояние изменилось.
-        /// </summary>
-        event EventHandler<LifetimeState> StateChanged;
-
-        /// <summary>
-        /// Присоединить к объекту.
-        /// </summary>
-        /// <param name="sourceObject">Исходный объект.</param>
-        void Bind(object sourceObject);
-
-        /// <summary>
-        /// Отсоединить от объекта.
-        /// </summary>
-        /// <param name="sourceObject">Исходный объект.</param>
-        void Unbind(object sourceObject);
+        ILifetimeBinding Binding { get; set; }
     }
 }
