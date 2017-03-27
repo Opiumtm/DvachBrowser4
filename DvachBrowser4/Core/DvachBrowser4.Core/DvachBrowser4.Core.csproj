@@ -107,6 +107,15 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CollectionSlice.cs" />
+    <Compile Include="Common\CoreConstants.cs" />
+    <Compile Include="Common\DebugHelper.cs" />
+    <Compile Include="Common\IDeepCloneable.cs" />
+    <Compile Include="Common\ITreeWalkContextBreak.cs" />
+    <Compile Include="Common\ObservableObject.cs" />
+    <Compile Include="Common\TreeApplyFunc.cs" />
+    <Compile Include="Common\TreeWalkContext.cs" />
+    <Compile Include="Common\Utility.cs" />
     <Compile Include="Lifetime\DispatchedLifetimeProxy.cs" />
     <Compile Include="Lifetime\DispatchedLifetimeStateBase.cs" />
     <Compile Include="Lifetime\FrameworkElementLifetime.cs" />

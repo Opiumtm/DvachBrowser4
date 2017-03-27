@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A1A67574-9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvachBrowser4.Core", "Core\DvachBrowser4.Core\DvachBrowser4.Core.csproj", "{39A835A1-26B6-4ED1-8F39-F2B512774721}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvachBrowser4.Core.Models", "DvachBrowser4.Core.Models\DvachBrowser4.Core.Models.csproj", "{6E69C340-5E51-4DC4-9973-81766085CBF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DvachBrowser4.Core.Models", "Core\DvachBrowser4.Core.Models\DvachBrowser4.Core.Models.csproj", "{6E69C340-5E51-4DC4-9973-81766085CBF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

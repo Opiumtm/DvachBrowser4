@@ -107,9 +107,104 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Board\BoardReference.cs" />
+    <Compile Include="Board\BoardReferenceExtension.cs" />
+    <Compile Include="Board\BoardReferencePostingExtension.cs" />
+    <Compile Include="Board\BoardReferences.cs" />
+    <Compile Include="DvachModelsHelper.cs" />
+    <Compile Include="Links\BoardCatalogLink.cs" />
+    <Compile Include="Links\BoardCatalogSort.cs" />
+    <Compile Include="Links\BoardLink.cs" />
+    <Compile Include="Links\BoardLinkBase.cs" />
+    <Compile Include="Links\BoardLinkCollection.cs" />
+    <Compile Include="Links\BoardLinkKind.cs" />
+    <Compile Include="Links\BoardMediaLink.cs" />
+    <Compile Include="Links\BoardPageLink.cs" />
+    <Compile Include="Links\FavoriteBoardInfo.cs" />
+    <Compile Include="Links\FavoriteThreadInfo.cs" />
+    <Compile Include="Links\LinkCollection.cs" />
+    <Compile Include="Links\MediaLink.cs" />
+    <Compile Include="Links\MediaType.cs" />
+    <Compile Include="Links\PostLink.cs" />
+    <Compile Include="Links\RootLink.cs" />
+    <Compile Include="Links\ShortThreadInfo.cs" />
+    <Compile Include="Links\ThreadLink.cs" />
+    <Compile Include="Links\ThreadLinkCollection.cs" />
+    <Compile Include="Links\ThreadPartLink.cs" />
+    <Compile Include="Links\ThreadPictureInfo.cs" />
+    <Compile Include="Links\ThreadTagLink.cs" />
+    <Compile Include="Links\YoutubeLink.cs" />
+    <Compile Include="Makaba\MakabaBoardPageExtension.cs" />
+    <Compile Include="Makaba\MakabaBoardReferenceExtension.cs" />
+    <Compile Include="Makaba\MakabaCollectionExtension.cs" />
+    <Compile Include="Makaba\MakabaEntityFlags.cs" />
+    <Compile Include="Makaba\MakabaEntityTree.cs" />
+    <Compile Include="Makaba\MakabaIconReference.cs" />
+    <Compile Include="Other\ArchiveReference.cs" />
+    <Compile Include="Other\ArchiveThreadTree.cs" />
+    <Compile Include="Other\MyPostsInfo.cs" />
+    <Compile Include="Other\PostCountInfo.cs" />
+    <Compile Include="Posting\CaptchaType.cs" />
+    <Compile Include="Posting\CaptchaTypes.cs" />
+    <Compile Include="Posting\DraftPostingData.cs" />
+    <Compile Include="Posting\DraftReference.cs" />
+    <Compile Include="Posting\PostingCapability.cs" />
+    <Compile Include="Posting\PostingCapabilityIcon.cs" />
+    <Compile Include="Posting\PostingCaptchaCapability.cs" />
+    <Compile Include="Posting\PostingCommentCapability.cs" />
+    <Compile Include="Posting\PostingData.cs" />
+    <Compile Include="Posting\PostingFieldSemanticRole.cs" />
+    <Compile Include="Posting\PostingIconCapability.cs" />
+    <Compile Include="Posting\PostingMarkupType.cs" />
+    <Compile Include="Posting\PostingMediaFile.cs" />
+    <Compile Include="Posting\PostingMediaFileCapability.cs" />
+    <Compile Include="Posting\PostingMediaFiles.cs" />
+    <Compile Include="Posts\BoardPageTree.cs" />
+    <Compile Include="Posts\BoardPageTreeExtension.cs" />
+    <Compile Include="Posts\CatalogTree.cs" />
+    <Compile Include="Posts\IPostTreeListSource.cs" />
+    <Compile Include="Posts\KnownMediaType.cs" />
+    <Compile Include="Posts\PostColor.cs" />
+    <Compile Include="Posts\PostFlags.cs" />
+    <Compile Include="Posts\PostImage.cs" />
+    <Compile Include="Posts\PostImageBase.cs" />
+    <Compile Include="Posts\PostImageWithThumbnail.cs" />
+    <Compile Include="Posts\PostMediaBase.cs" />
+    <Compile Include="Posts\PostNode.cs" />
+    <Compile Include="Posts\PostNodeAttribute.cs" />
+    <Compile Include="Posts\PostNodeAttributeBase.cs" />
+    <Compile Include="Posts\PostNodeBase.cs" />
+    <Compile Include="Posts\PostNodeBasicAttribute.cs" />
+    <Compile Include="Posts\PostNodeBoardLink.cs" />
+    <Compile Include="Posts\PostNodeBoardLinkAttribute.cs" />
+    <Compile Include="Posts\PostNodeBreak.cs" />
+    <Compile Include="Posts\PostNodeLinkAttribute.cs" />
+    <Compile Include="Posts\PostNodes.cs" />
+    <Compile Include="Posts\PostTextNode.cs" />
+    <Compile Include="Posts\PostTree.cs" />
+    <Compile Include="Posts\PostTreeCollection.cs" />
+    <Compile Include="Posts\PostTreeCollectionExtension.cs" />
+    <Compile Include="Posts\PostTreeCollectionMode.cs" />
+    <Compile Include="Posts\PostTreeContainer.cs" />
+    <Compile Include="Posts\PostTreeCountryExtension.cs" />
+    <Compile Include="Posts\PostTreeExtension.cs" />
+    <Compile Include="Posts\PostTreeIconExtension.cs" />
+    <Compile Include="Posts\PostTreePosterExtension.cs" />
+    <Compile Include="Posts\PostTreeTagsExtension.cs" />
+    <Compile Include="Posts\PostYoutubeVideo.cs" />
+    <Compile Include="Posts\ThreadPreviewTree.cs" />
+    <Compile Include="Posts\ThreadTree.cs" />
+    <Compile Include="Posts\ThreadTreePartial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\DvachBrowser4.Core.Models.rd.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DvachBrowser4.Core\DvachBrowser4.Core.csproj">
+      <Project>{39a835a1-26b6-4ed1-8f39-f2b512774721}</Project>
+      <Name>DvachBrowser4.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
