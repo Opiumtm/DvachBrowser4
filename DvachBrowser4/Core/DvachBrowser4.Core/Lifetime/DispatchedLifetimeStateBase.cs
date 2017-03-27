@@ -19,7 +19,7 @@ namespace DvachBrowser4.Core.Lifetime
         /// </summary>
         /// <param name="state">Состояние.</param>
         /// <returns>Таск.</returns>
-        protected override async Task UpdateLifetimeState(LifetimeState state)
+        protected override async ValueTask<Nothing> UpdateLifetimeState(LifetimeState state)
         {
             if (Dispatcher.HasThreadAccess)
             {
@@ -40,6 +40,7 @@ namespace DvachBrowser4.Core.Lifetime
                 }
             });
             await tcs.Task;
+            return Nothing.Value;
         }
     }
 }

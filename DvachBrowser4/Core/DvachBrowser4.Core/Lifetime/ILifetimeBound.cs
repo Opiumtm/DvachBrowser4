@@ -13,7 +13,7 @@ namespace DvachBrowser4.Core.Lifetime
         /// </summary>
         /// <param name="newState">Новое состояние.</param>
         /// <returns>Таск.</returns>
-        Task SetLifetimeState(LifetimeState newState);
+        ValueTask<Nothing> SetLifetimeState(LifetimeState newState);
 
         /// <summary>
         /// Текущая привязка.

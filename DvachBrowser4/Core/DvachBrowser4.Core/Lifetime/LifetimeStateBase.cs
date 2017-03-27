@@ -23,7 +23,7 @@ namespace DvachBrowser4.Core.Lifetime
         /// </summary>
         /// <param name="state">Состояние.</param>
         /// <returns>Таск.</returns>
-        protected virtual Task UpdateLifetimeState(LifetimeState state)
+        protected virtual ValueTask<Nothing> UpdateLifetimeState(LifetimeState state)
         {
             return DoUpdateLifetimeState(state);
         }
@@ -33,10 +33,10 @@ namespace DvachBrowser4.Core.Lifetime
         /// </summary>
         /// <param name="state">Состояние.</param>
         /// <returns>Таск.</returns>
-        protected async Task DoUpdateLifetimeState(LifetimeState state)
+        protected async ValueTask<Nothing> DoUpdateLifetimeState(LifetimeState state)
         {
             Interlocked.Exchange(ref _lifetimeState, (int) state);
-            await InvokeLifetimeStateChanged(state);
+            return await InvokeLifetimeStateChanged(state);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace DvachBrowser4.Core.Lifetime
         /// </summary>
         /// <param name="lifetimeState">Состояние.</param>
         /// <returns>Событие.</returns>
-        protected virtual async Task InvokeLifetimeStateChanged(LifetimeState lifetimeState)
+        protected virtual async ValueTask<Nothing> InvokeLifetimeStateChanged(LifetimeState lifetimeState)
         {
             LifetimeStateChangedEventHandler[] toInvoke;
             lock (_handlers)
@@ -74,6 +74,7 @@ namespace DvachBrowser4.Core.Lifetime
             {
                 await handler(this, lifetimeState);
             }
+            return Nothing.Value;
         }
 
         private readonly HashSet<LifetimeStateChangedEventHandler> _handlers = new HashSet<LifetimeStateChangedEventHandler>();
