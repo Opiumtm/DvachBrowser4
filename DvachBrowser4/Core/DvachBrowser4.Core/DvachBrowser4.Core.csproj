@@ -118,6 +118,7 @@
     <Compile Include="Lifetime\LifetimeState.cs" />
     <Compile Include="Lifetime\LifetimeStateBase.cs" />
     <Compile Include="Lifetime\LifetimeStateChangedEventHandler.cs" />
+    <Compile Include="Nothing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IServiceConnector.cs" />
     <Compile Include="Services\IServiceConsumer.cs" />

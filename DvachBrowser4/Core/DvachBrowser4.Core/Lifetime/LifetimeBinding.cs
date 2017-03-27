@@ -45,6 +45,7 @@ namespace DvachBrowser4.Core.Lifetime
                         Debugger.Break();
                     }
                 }
+                return Nothing.Value;
             };
             obj._bind = () =>
             {

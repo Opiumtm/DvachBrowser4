@@ -10,5 +10,5 @@ namespace DvachBrowser4.Core.Lifetime
     /// <param name="sender">Отправитель.</param>
     /// <param name="lifetimeState">Состояние.</param>
     /// <returns>Таск.</returns>
-    public delegate Task LifetimeStateChangedEventHandler(object sender, LifetimeState lifetimeState);
+    public delegate ValueTask<Nothing> LifetimeStateChangedEventHandler(object sender, LifetimeState lifetimeState);
 }
