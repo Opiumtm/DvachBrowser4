@@ -196,6 +196,11 @@
     <Compile Include="Posts\ThreadTree.cs" />
     <Compile Include="Posts\ThreadTreePartial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ILinkHashService.cs" />
+    <Compile Include="Services\ILinkTransformService.cs" />
+    <Compile Include="Services\LinkHashService.cs" />
+    <Compile Include="Services\LinkTransformService.cs" />
+    <Compile Include="Services\ModelServicesRegistration.cs" />
     <EmbeddedResource Include="Properties\DvachBrowser4.Core.Models.rd.xml" />
   </ItemGroup>
   <ItemGroup>

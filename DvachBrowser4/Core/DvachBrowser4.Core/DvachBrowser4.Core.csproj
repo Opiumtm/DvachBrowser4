@@ -115,6 +115,7 @@
     <Compile Include="Common\ObservableObject.cs" />
     <Compile Include="Common\TreeApplyFunc.cs" />
     <Compile Include="Common\TreeWalkContext.cs" />
+    <Compile Include="Common\UniqueIdHelper.cs" />
     <Compile Include="Common\Utility.cs" />
     <Compile Include="Lifetime\DispatchedLifetimeProxy.cs" />
     <Compile Include="Lifetime\DispatchedLifetimeStateBase.cs" />
