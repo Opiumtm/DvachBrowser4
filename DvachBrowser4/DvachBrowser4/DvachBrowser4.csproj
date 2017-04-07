@@ -128,6 +128,18 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core\DvachBrowser4.Core.Interfaces\DvachBrowser4.Core.Interfaces.csproj">
+      <Project>{4b409e21-d925-4ca4-b463-108028916986}</Project>
+      <Name>DvachBrowser4.Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\DvachBrowser4.Core.Models\DvachBrowser4.Core.Models.csproj">
+      <Project>{6e69c340-5e51-4dc4-9973-81766085cbf5}</Project>
+      <Name>DvachBrowser4.Core.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\DvachBrowser4.Core.Serialization\DvachBrowser4.Core.Serialization.csproj">
+      <Project>{34b58308-6ef5-4ec9-8d90-224d04c5d4b6}</Project>
+      <Name>DvachBrowser4.Core.Serialization</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core\DvachBrowser4.Core\DvachBrowser4.Core.csproj">
       <Project>{39a835a1-26b6-4ed1-8f39-f2b512774721}</Project>
       <Name>DvachBrowser4.Core</Name>
