@@ -1,4 +1,6 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
+using DvachBrowser4.Core.Models.Extensions;
 
 namespace DvachBrowser4.Core.Models.Links
 {
@@ -6,18 +8,7 @@ namespace DvachBrowser4.Core.Models.Links
     /// Базовый класс для ссылки на борде.
     /// </summary>
     [DataContract(Namespace = CoreConstants.DvachBrowserNamespace)]
-
-    [KnownType(typeof(BoardLink))]
-    [KnownType(typeof(BoardPageLink))]
-    [KnownType(typeof(ThreadLink))]
-    [KnownType(typeof(ThreadPartLink))]
-    [KnownType(typeof(PostLink))]
-    [KnownType(typeof(BoardMediaLink))]
-    [KnownType(typeof(MediaLink))]
-    [KnownType(typeof(YoutubeLink))]
-    [KnownType(typeof(RootLink))]
-    [KnownType(typeof(ThreadTagLink))]
-    [KnownType(typeof(BoardCatalogLink))]
+    [KnownType(nameof(GetKnownTypes))]
     public abstract class BoardLinkBase : IDeepCloneable<BoardLinkBase>
     {
         /// <summary>
@@ -30,10 +21,7 @@ namespace DvachBrowser4.Core.Models.Links
         /// Тип ссылки.
         /// </summary>
         [IgnoreDataMember]
-        public BoardLinkKind LinkKind
-        {
-            get { return GetLinkKind(); }
-        }
+        public BoardLinkKind LinkKind => GetLinkKind();
 
         /// <summary>
         /// Получить тип ссылки.
@@ -46,5 +34,14 @@ namespace DvachBrowser4.Core.Models.Links
         /// </summary>
         /// <returns>Клон.</returns>
         public abstract BoardLinkBase DeepClone();
+
+        /// <summary>
+        /// Получить известные типы.
+        /// </summary>
+        /// <returns>Известные типы.</returns>
+        private static Type[] GetKnownTypes()
+        {
+            return DataContractExtensions.GetKnownTypes<BoardLinkBase>();
+        }
     }
 }

@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E69C340-5E51-4DC4-9973-81766085CBF5}</ProjectGuid>
+    <ProjectGuid>{6CCE1858-A2F2-4BB7-BDD1-ED301BF4668B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DvachBrowser4.Core.Models</RootNamespace>
-    <AssemblyName>DvachBrowser4.Core.Models</AssemblyName>
+    <RootNamespace>DvachBrowser4.Core.Models.Makaba</RootNamespace>
+    <AssemblyName>DvachBrowser4.Core.Models.Makaba</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.15063.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -102,110 +102,35 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="project.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Board\BoardReference.cs" />
-    <Compile Include="Board\BoardReferenceExtension.cs" />
-    <Compile Include="Board\BoardReferencePostingExtension.cs" />
-    <Compile Include="Board\BoardReferences.cs" />
-    <Compile Include="DvachModelsHelper.cs" />
-    <Compile Include="Extensions\CoreModelExtensions.cs" />
-    <Compile Include="Extensions\DataContractExtensions.cs" />
-    <Compile Include="Links\BoardCatalogLink.cs" />
-    <Compile Include="Links\BoardCatalogSort.cs" />
-    <Compile Include="Links\BoardLink.cs" />
-    <Compile Include="Links\BoardLinkBase.cs" />
-    <Compile Include="Links\BoardLinkCollection.cs" />
-    <Compile Include="Links\BoardLinkKind.cs" />
-    <Compile Include="Links\BoardMediaLink.cs" />
-    <Compile Include="Links\BoardPageLink.cs" />
-    <Compile Include="Links\FavoriteBoardInfo.cs" />
-    <Compile Include="Links\FavoriteThreadInfo.cs" />
-    <Compile Include="Links\LinkCollection.cs" />
-    <Compile Include="Links\MediaLink.cs" />
-    <Compile Include="Links\MediaType.cs" />
-    <Compile Include="Links\PostLink.cs" />
-    <Compile Include="Links\RootLink.cs" />
-    <Compile Include="Links\ShortThreadInfo.cs" />
-    <Compile Include="Links\ThreadLink.cs" />
-    <Compile Include="Links\ThreadLinkCollection.cs" />
-    <Compile Include="Links\ThreadPartLink.cs" />
-    <Compile Include="Links\ThreadPictureInfo.cs" />
-    <Compile Include="Links\ThreadTagLink.cs" />
-    <Compile Include="Links\YoutubeLink.cs" />
-    <Compile Include="Other\ArchiveReference.cs" />
-    <Compile Include="Other\ArchiveThreadTree.cs" />
-    <Compile Include="Other\MyPostsInfo.cs" />
-    <Compile Include="Other\PostCountInfo.cs" />
-    <Compile Include="Posting\CaptchaType.cs" />
-    <Compile Include="Posting\CaptchaTypes.cs" />
-    <Compile Include="Posting\DraftPostingData.cs" />
-    <Compile Include="Posting\DraftReference.cs" />
-    <Compile Include="Posting\PostingCapability.cs" />
-    <Compile Include="Posting\PostingCapabilityIcon.cs" />
-    <Compile Include="Posting\PostingCaptchaCapability.cs" />
-    <Compile Include="Posting\PostingCommentCapability.cs" />
-    <Compile Include="Posting\PostingData.cs" />
-    <Compile Include="Posting\PostingFieldSemanticRole.cs" />
-    <Compile Include="Posting\PostingIconCapability.cs" />
-    <Compile Include="Posting\PostingMarkupType.cs" />
-    <Compile Include="Posting\PostingMediaFile.cs" />
-    <Compile Include="Posting\PostingMediaFileCapability.cs" />
-    <Compile Include="Posting\PostingMediaFiles.cs" />
-    <Compile Include="Posts\BoardPageTree.cs" />
-    <Compile Include="Posts\BoardPageTreeExtension.cs" />
-    <Compile Include="Posts\CatalogTree.cs" />
-    <Compile Include="Posts\IPostTreeListSource.cs" />
-    <Compile Include="Posts\KnownMediaType.cs" />
-    <Compile Include="Posts\PostColor.cs" />
-    <Compile Include="Posts\PostFlags.cs" />
-    <Compile Include="Posts\PostImage.cs" />
-    <Compile Include="Posts\PostImageBase.cs" />
-    <Compile Include="Posts\PostImageWithThumbnail.cs" />
-    <Compile Include="Posts\PostMediaBase.cs" />
-    <Compile Include="Posts\PostNode.cs" />
-    <Compile Include="Posts\PostNodeAttribute.cs" />
-    <Compile Include="Posts\PostNodeAttributeBase.cs" />
-    <Compile Include="Posts\PostNodeBase.cs" />
-    <Compile Include="Posts\PostNodeBasicAttribute.cs" />
-    <Compile Include="Posts\PostNodeBoardLink.cs" />
-    <Compile Include="Posts\PostNodeBoardLinkAttribute.cs" />
-    <Compile Include="Posts\PostNodeBreak.cs" />
-    <Compile Include="Posts\PostNodeLinkAttribute.cs" />
-    <Compile Include="Posts\PostNodes.cs" />
-    <Compile Include="Posts\PostTextNode.cs" />
-    <Compile Include="Posts\PostTree.cs" />
-    <Compile Include="Posts\PostTreeCollection.cs" />
-    <Compile Include="Posts\PostTreeCollectionExtension.cs" />
-    <Compile Include="Posts\PostTreeCollectionMode.cs" />
-    <Compile Include="Posts\PostTreeContainer.cs" />
-    <Compile Include="Posts\PostTreeCountryExtension.cs" />
-    <Compile Include="Posts\PostTreeExtension.cs" />
-    <Compile Include="Posts\PostTreeIconExtension.cs" />
-    <Compile Include="Posts\PostTreePosterExtension.cs" />
-    <Compile Include="Posts\PostTreeTagsExtension.cs" />
-    <Compile Include="Posts\PostYoutubeVideo.cs" />
-    <Compile Include="Posts\ThreadPreviewTree.cs" />
-    <Compile Include="Posts\ThreadTree.cs" />
-    <Compile Include="Posts\ThreadTreePartial.cs" />
+    <Compile Include="MakabaBoardPageExtension.cs" />
+    <Compile Include="MakabaBoardReferenceExtension.cs" />
+    <Compile Include="MakabaCollectionExtension.cs" />
+    <Compile Include="MakabaEntityFlags.cs" />
+    <Compile Include="MakabaEntityTree.cs" />
+    <Compile Include="MakabaIconReference.cs" />
+    <Compile Include="MakabaModelExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ILinkHashService.cs" />
-    <Compile Include="Services\ILinkTransformService.cs" />
-    <Compile Include="Services\LinkHashService.cs" />
-    <Compile Include="Services\LinkTransformService.cs" />
-    <Compile Include="Services\ModelServicesRegistration.cs" />
-    <EmbeddedResource Include="Properties\DvachBrowser4.Core.Models.rd.xml" />
+    <EmbeddedResource Include="Properties\DvachBrowser4.Core.Models.Makaba.rd.xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>5.2.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DvachBrowser4.Core.Models\DvachBrowser4.Core.Models.csproj">
+      <Project>{6e69c340-5e51-4dc4-9973-81766085cbf5}</Project>
+      <Name>DvachBrowser4.Core.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DvachBrowser4.Core\DvachBrowser4.Core.csproj">
       <Project>{39a835a1-26b6-4ed1-8f39-f2b512774721}</Project>
       <Name>DvachBrowser4.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

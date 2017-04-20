@@ -1,5 +1,6 @@
-﻿using System.Runtime.Serialization;
-using DvachBrowser4.Core.Models.Makaba;
+﻿using System;
+using System.Runtime.Serialization;
+using DvachBrowser4.Core.Models.Extensions;
 
 namespace DvachBrowser4.Core.Models.Board
 {
@@ -7,9 +8,16 @@ namespace DvachBrowser4.Core.Models.Board
     /// Расширение информации о борде.
     /// </summary>
     [DataContract(Namespace = CoreConstants.DvachBrowserNamespace)]
-    [KnownType(typeof(MakabaBoardReferenceExtension))]
-    [KnownType(typeof(BoardReferencePostingExtension))]
+    [KnownType(nameof(GetKnownTypes))]
     public abstract class BoardReferenceExtension
     {
+        /// <summary>
+        /// Получить известные типы.
+        /// </summary>
+        /// <returns>Известные типы.</returns>
+        private static Type[] GetKnownTypes()
+        {
+            return DataContractExtensions.GetKnownTypes<BoardReferenceExtension>();
+        }
     }
 }
